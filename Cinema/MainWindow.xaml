@@ -7,6 +7,44 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Image x:Name="ancenis_cine_ma_ecran_total_jpg" Margin="0,0,0,0" Source="ancenis-cinéma-ecran-total.jpg" Stretch="Fill"/>
+        <Image x:Name="images_png" Margin="149,0,128.4,226.8" Source="images.png" Stretch="Fill"/>
+        <Label  Foreground="White" Name="label" Content="Входит в сеть CinemaForAll&#xD;&#xA;+7 (495) 567 34 56 (автоответчик),&#xD;&#xA;+7 (495) 761 00 99 (заказ билетов),&#xD;&#xA;Москва, ул. Киношников, 10/1&#xD;&#xA;Билеты 150-700 р.&#xD;&#xA; " HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="106" Width="238" FontFamily="Sylfaen" FontSize="10" />
+        <Button Click="stranger_Click" Name="stranger" Background="Black" Foreground="White" Margin="20,150,0,4.8"  Width="91" HorizontalAlignment="Left" >
+            <Button.RenderTransform>
+                <ScaleTransform x:Name="transform"/>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="transform" Storyboard.TargetProperty="ScaleX" To="1.2" Duration="0:0:0.2" />
+                            <DoubleAnimation Storyboard.TargetName="transform" Storyboard.TargetProperty="ScaleY" To="1.2" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="transform" Storyboard.TargetProperty="ScaleX" Duration="0:0:0.2" />
+                            <DoubleAnimation Storyboard.TargetName="transform" Storyboard.TargetProperty="ScaleY"  Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0*"/>
+                    <RowDefinition Height="0*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"></TextBlock>
+                <Image Grid.Row="1" Source=""></Image>
+            </Grid>
+        </Button>
+        <Button Click="pirats_Click" Name="pirats"  HorizontalAlignment="Left" Height="161" Margin="124,150,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label Name="label1" Foreground="#FFF8F939" Content="Здесь Вы можете посмотреть расписание киносеансов&#xD;&#xA;Для начала выберете фильм:" HorizontalAlignment="Left" Height="56" Margin="10,94,0,0" VerticalAlignment="Top" Width="481" FontSize="13" FontFamily="Comic Sans MS"/>
+
+
     </Grid>
 </Window>

@@ -23,6 +23,25 @@ namespace Cinema
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void ComdoBox_Selected(object sender, SelectionChangedEventArgs e)
+        {
+        }
+
+        private void stranger_Click(object sender, RoutedEventArgs e)
+        {
+            Film1 Stranger = new Film1(); //обозначаем окно 1 в программе
+            Stranger.Show(); //открываем окно 1
+            Close();  //закрываем это окно (которое сейчас открыто)
+        }
+
+        private void pirats_Click(object sender, RoutedEventArgs e)
+        {
+            Film2 Pirats = new Film2(); //обозначаем окно 1 в программе
+            Pirats.Show(); //открываем окно 1
+            Close();  //закрываем это окно (которое сейчас открыто)
         }
     }
 }
