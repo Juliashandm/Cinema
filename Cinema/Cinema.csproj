@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Admins.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Film1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -63,10 +67,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Film3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Film4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Film5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Admins.xaml.cs">
+      <DependentUpon>Admins.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettings.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -77,6 +97,16 @@
     <Compile Include="Film2.xaml.cs">
       <DependentUpon>Film2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Film3.xaml.cs">
+      <DependentUpon>Film3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Film4.xaml.cs">
+      <DependentUpon>Film4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Film5.xaml.cs">
+      <DependentUpon>Film5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -116,7 +146,34 @@
     <Resource Include="images.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="pirats.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="rescuers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="stranger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hunter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="r1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="r2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="r3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="r4.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="r5.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

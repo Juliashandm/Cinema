@@ -1,0 +1,72 @@
+﻿<Window x:Class="Cinema.Film3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cinema"
+        mc:Ignorable="d"
+       Title="Film3" Height="460" Width="750">
+
+    <Grid Background="#FFFFD3F6">
+        <Label  Foreground="Black" Name="label1" Content="Расписание" HorizontalAlignment="Left" Height="39" Margin="555,36,-3,0" VerticalAlignment="Top" Width="192" FontSize="21"/>
+        <ComboBox  Background="White" SelectionChanged="ComdoBox_Selected"  Name="comboBox" HorizontalAlignment="Left" Margin="559,75,0,0" VerticalAlignment="Top" Width="120" FontSize="11" >
+            <ComboBoxItem IsSelected="True">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>сегодня, чт 25 мая</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>завтра, пт 26 мая</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>сб, 27 мая</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>вс, 28 мая</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>пн, 29 мая</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>вт, 30 мая</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>ср, 31 мая</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>чт, 1 июня</TextBlock>
+            </StackPanel>
+        </ComboBox>
+        <Button Click="back_Click" Name="back" Content="Back" HorizontalAlignment="Left" Height="20" Margin="665,11,0,0" VerticalAlignment="Top" Width="67" />
+        <Image x:Name="image"  Source="big.jpg" HorizontalAlignment="Left" Height="313" Margin="15,19,0,0" VerticalAlignment="Top" Width="216"/>
+        <Image Name="r3_PNG"  HorizontalAlignment="Left" Height="55" Margin="15,332,0,0" VerticalAlignment="Top" Width="207" Source="r3.PNG" Stretch="Fill"/>
+        <TextBox BorderBrush="#FFFFD3F6" Background="#FFFFD3F6" Foreground="#FFF03D1F" Name="textBox" HorizontalAlignment="Left" Height="87" Margin="256,21,0,0" TextWrapping="Wrap" Text="Большой" VerticalAlignment="Top" Width="206" FontSize="35" SelectionOpacity="0"/>
+        <TextBox BorderBrush="#FFFFD3F6" Background="#FFFFD3F6" Foreground="OrangeRed" x:Name="textBox1" HorizontalAlignment="Left" Height="287" Margin="232,100,0,0" TextWrapping="Wrap" Text="Жанр&#xD;&#xA;&#xD;&#xA;Год&#xD;&#xA;&#xD;&#xA;Страна&#xD;&#xA;&#xD;&#xA;Режиссер&#xD;&#xA;&#xD;&#xA;Продюсер&#xD;&#xA;&#xD;&#xA;Возраст&#xD;&#xA;&#xD;&#xA;Время&#xD;&#xA;&#xD;&#xA;В главных ролях&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" VerticalAlignment="Top" Width="100"/>
+        <TextBox BorderBrush="#FFFFD3F6" Background="#FFFFD3F6" Foreground="Black" x:Name="textBox2" HorizontalAlignment="Left" Height="288" Margin="333,100,0,0" TextWrapping="Wrap" Text="драма&#xA;&#xA;2016&#xA;&#xA;Россия&#xA;&#xA;Валерий Тодоровский&#xA;&#xA;Валерий Тодоровский и др.&#xA;12+&#xA;&#xA;132 мин./02:12&#xA;&#xA;Алиса Фрейндлих&#xA;Валентина Теличкина&#xA;Николя Ле Риш&#xA;Маргарита Симонова и др.&#xA;&#xA;&#xA;" VerticalAlignment="Top" Width="170" TextChanged="textBox2_TextChanged"/>
+        <Label x:Name="label" Content="Билеты Вы можете приобрести в кассе кинотеатра" HorizontalAlignment="Left" Margin="384,391,0,0" VerticalAlignment="Top" Width="356" FontSize="14" FontFamily="Segoe UI Semibold" Foreground="#FF8225F1"/>
+        <Label x:Name="label2" Content="2D:" HorizontalAlignment="Left" Margin="520,125,0,0" VerticalAlignment="Top" Width="38" FontSize="17" FontFamily="Segoe UI Black"/>
+        <Label x:Name="label3" Content="01.00" HorizontalAlignment="Left" Height="29" Margin="571,122,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4" Content=" 249 руб." HorizontalAlignment="Left" Height="29" Margin="564,146,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy" Content="04.15" HorizontalAlignment="Left" Height="29" Margin="633,122,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy" Content=" 249 руб." HorizontalAlignment="Left" Height="29" Margin="625,146,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy2" Content="16.15" HorizontalAlignment="Left" Height="29" Margin="670,194,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy2" Content=" 350 руб." HorizontalAlignment="Left" Height="29" Margin="667,218,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy3" Content="13.30" HorizontalAlignment="Left" Height="29" Margin="608,194,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy3" Content=" 300 руб." HorizontalAlignment="Left" Height="29" Margin="600,218,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy4" Content="11.00" HorizontalAlignment="Left" Height="29" Margin="540,194,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy4" Content=" 300 руб." HorizontalAlignment="Left" Height="29" Margin="536,218,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy5" Content="08.00" HorizontalAlignment="Left" Height="29" Margin="689,122,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy5" Content=" 249 руб." HorizontalAlignment="Left" Height="29" Margin="682,146,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy1" Content="23.00" HorizontalAlignment="Left" Height="29" Margin="671,274,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy1" Content=" 350 руб." HorizontalAlignment="Left" Height="29" Margin="668,298,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy6" Content="21.30" HorizontalAlignment="Left" Height="29" Margin="609,274,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy6" Content=" 350 руб." HorizontalAlignment="Left" Height="29" Margin="601,298,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy7" Content="19.40" HorizontalAlignment="Left" Height="29" Margin="541,274,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy7" Content=" 350 руб." HorizontalAlignment="Left" Height="29" Margin="537,298,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+
+
+
+    </Grid>
+
+</Window>
+

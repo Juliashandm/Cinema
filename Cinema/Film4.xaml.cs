@@ -15,29 +15,29 @@ using System.Windows.Shapes;
 namespace Cinema
 {
     /// <summary>
-    /// Interaction logic for Film2.xaml
+    /// Interaction logic for Film4.xaml
     /// </summary>
-    public partial class Film2 : Window
+    public partial class Film4 : Window
     {
-        public Film2()
+        public Film4()
         {
             InitializeComponent();
+        }
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow start = new MainWindow();
+            start.Show();
+            Close();
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
 
         private void ComdoBox_Selected(object sender, SelectionChangedEventArgs e)
         {
 
         }
-
-        private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
-        {
-             }
-             private void back_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow start = new MainWindow();
-            start.Show();
-            Close();
-        }
     }
-    }
-
+}

@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="460" Width="750">
     <Grid>
-        <Image x:Name="ancenis_cine_ma_ecran_total_jpg" Margin="0,0,0,0" Source="ancenis-cinéma-ecran-total.jpg" Stretch="Fill"/>
-        <Image x:Name="images_png" Margin="149,0,128.4,226.8" Source="images.png" Stretch="Fill"/>
-        <Label  Foreground="White" Name="label" Content="Входит в сеть CinemaForAll&#xD;&#xA;+7 (495) 567 34 56 (автоответчик),&#xD;&#xA;+7 (495) 761 00 99 (заказ билетов),&#xD;&#xA;Москва, ул. Киношников, 10/1&#xD;&#xA;Билеты 150-700 р.&#xD;&#xA; " HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="106" Width="238" FontFamily="Sylfaen" FontSize="10" />
-        <Button Click="stranger_Click" Name="stranger" Background="Black" Foreground="White" Margin="20,150,0,4.8"  Width="91" HorizontalAlignment="Left" >
+        <Image x:Name="ancenis_cine_ma_ecran_total_jpg"  Source="ancenis-cinéma-ecran-total.jpg" Stretch="Fill"/>
+        <Image x:Name="images_png" Margin="210,1,229,296" Source="images.png" Stretch="Fill"/>
+        <Label  Foreground="White" Name="label" Content="Входит в сеть CinemaForAll&#xD;&#xA;+7 (495) 567 34 56 (автоответчик),&#xD;&#xA;+7 (495) 761 00 99 (заказ билетов),&#xD;&#xA;Москва, ул. Киношников, 10/1&#xD;&#xA;Билеты 150-700 р.&#xD;&#xA; " HorizontalAlignment="Left" Margin="0,23,0,0" VerticalAlignment="Top" Height="101" Width="226" FontFamily="Sylfaen" FontSize="13" />
+        <Button Click="stranger_Click" Name="stranger" Background="Black" Foreground="White" Margin="15,180,0,0"  Width="120" HorizontalAlignment="Left" Height="180" >
             <Button.RenderTransform>
                 <ScaleTransform x:Name="transform"/>
             </Button.RenderTransform>
@@ -32,19 +32,122 @@
                     </BeginStoryboard>
                 </EventTrigger>
             </Button.Triggers>
-
-            <Grid >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0*"/>
-                    <RowDefinition Height="0*"/>
-                </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0"></TextBlock>
-                <Image Grid.Row="1" Source=""></Image>
-            </Grid>
+            <Image Name="stranger_jpg" Height="180" Source="stranger.jpg" Stretch="Fill" Width="120" />
         </Button>
-        <Button Click="pirats_Click" Name="pirats"  HorizontalAlignment="Left" Height="161" Margin="124,150,0,0" VerticalAlignment="Top" Width="91"/>
-        <Label Name="label1" Foreground="#FFF8F939" Content="Здесь Вы можете посмотреть расписание киносеансов&#xD;&#xA;Для начала выберете фильм:" HorizontalAlignment="Left" Height="56" Margin="10,94,0,0" VerticalAlignment="Top" Width="481" FontSize="13" FontFamily="Comic Sans MS"/>
 
+        <Button Name="pirats" Click="pirats_Click"  Background="Black" Foreground="White" Margin="158,180,0,0"  Width="120" HorizontalAlignment="Left" Height="180" >
+            <Button.RenderTransform>
+                <ScaleTransform x:Name="transform1"/>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="transform1" Storyboard.TargetProperty="ScaleX" To="1.2" Duration="0:0:0.2" />
+                            <DoubleAnimation Storyboard.TargetName="transform1" Storyboard.TargetProperty="ScaleY" To="1.2" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="transform1" Storyboard.TargetProperty="ScaleX" Duration="0:0:0.2" />
+                            <DoubleAnimation Storyboard.TargetName="transform1" Storyboard.TargetProperty="ScaleY"  Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+            <Image Name="pirats_jpg" Height="180" Source="pirats.jpg" Stretch="Fill" Width="120" VerticalAlignment="Bottom"/>
+
+        </Button>
+        <Label Name="label1" Foreground="#FFF8F939" Content="Здесь Вы можете посмотреть информацию о фильмах и расписание киносеансов&#xA;Для начала выберете фильм:" HorizontalAlignment="Left" Margin="113,144,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Comic Sans MS" Height="62" Width="580"/>
+        <Button Name="big"  Click="big_Click"  Background="Black" Foreground="White" Margin="305,180,0,0"  Width="120" HorizontalAlignment="Left" Height="180" >
+            <Button.RenderTransform>
+                <ScaleTransform x:Name="transform2"/>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="transform2" Storyboard.TargetProperty="ScaleX" To="1.2" Duration="0:0:0.2" />
+                            <DoubleAnimation Storyboard.TargetName="transform2" Storyboard.TargetProperty="ScaleY" To="1.2" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="transform2" Storyboard.TargetProperty="ScaleX" Duration="0:0:0.2" />
+                            <DoubleAnimation Storyboard.TargetName="transform2" Storyboard.TargetProperty="ScaleY"  Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+            <Image Name="big_jpg" Height="180" Source="big.jpg" Stretch="Fill" Width="120" VerticalAlignment="Bottom"/>
+
+        </Button>
+        <Button Name="hunter"  Click="hunter_Click"  Background="Black" Foreground="White" Margin="450,180,0,0"  Width="120" HorizontalAlignment="Left" Height="180" >
+            <Button.RenderTransform>
+                <ScaleTransform x:Name="transform3"/>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="transform3" Storyboard.TargetProperty="ScaleX" To="1.2" Duration="0:0:0.2" />
+                            <DoubleAnimation Storyboard.TargetName="transform3" Storyboard.TargetProperty="ScaleY" To="1.2" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="transform3" Storyboard.TargetProperty="ScaleX" Duration="0:0:0.2" />
+                            <DoubleAnimation Storyboard.TargetName="transform3" Storyboard.TargetProperty="ScaleY"  Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+            <Image Name="hunter_jpg" Height="180" Source="hunter.jpg" Stretch="Fill" Width="120" VerticalAlignment="Bottom"/>
+
+        </Button>
+        <Button Name="rescuers" Click="rescuers_Click"  Background="Black"  Margin="595,180,0,0"  Width="120" HorizontalAlignment="Left" Height="180" >
+            <Button.RenderTransform>
+                <ScaleTransform x:Name="transform4"/>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="transform4" Storyboard.TargetProperty="ScaleX" To="1.2" Duration="0:0:0.2" />
+                            <DoubleAnimation Storyboard.TargetName="transform4" Storyboard.TargetProperty="ScaleY" To="1.2" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="transform4" Storyboard.TargetProperty="ScaleX" Duration="0:0:0.2" />
+                            <DoubleAnimation Storyboard.TargetName="transform4" Storyboard.TargetProperty="ScaleY"  Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+            <Image Name="rescuers_jpg" Height="180" Source="rescuers.jpg"  Width="120" Stretch="Fill" VerticalAlignment="Bottom"  >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.017"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+
+        </Button>
+        <Button x:Name="admin" Background="WhiteSmoke" Content="Для администратора" HorizontalAlignment="Left" Height="24" Margin="591,13,0,0" VerticalAlignment="Top" Width="135" Click="admin_Click" RenderTransformOrigin="0.5,0.5" FontWeight="Bold"/>
+        <PasswordBox Visibility="Hidden" x:Name="password" HorizontalAlignment="Left" Height="30" Margin="517,11,0,0" VerticalAlignment="Top" Width="222"/>
+        <Button Visibility="Hidden" x:Name="login" Content="Ввести пароль" Foreground="White" Background="Black" HorizontalAlignment="Left" Height="30" Margin="558,45,0,0" VerticalAlignment="Top" Width="149" FontFamily="Segoe UI Black" FontSize="18" Click="login_Click"/>
 
     </Grid>
 </Window>

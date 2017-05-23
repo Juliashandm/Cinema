@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema"
         mc:Ignorable="d"
-        Title="Film1" Height="350" Width="525">
+        Title="Film1" Height="460" Width="750">
     <Grid Background="#FFDCFAF9">
-        <Label  Foreground="Black" Name="label1" Content="Расписание" HorizontalAlignment="Left" Height="39" Margin="10,119,0,0" VerticalAlignment="Top" Width="192" FontSize="21"/>
-        <ComboBox  Background="White" SelectionChanged="ComdoBox_Selected"  Name="comboBox" HorizontalAlignment="Left" Margin="155,129,0,0" VerticalAlignment="Top" Width="120" FontSize="11" >
+        <Label  Foreground="Black" Name="label1" Content="Расписание" HorizontalAlignment="Left" Height="39" Margin="555,36,-3,0" VerticalAlignment="Top" Width="192" FontSize="21"/>
+        <ComboBox  Background="White" SelectionChanged="ComdoBox_Selected"  Name="comboBox" HorizontalAlignment="Left" Margin="559,75,0,0" VerticalAlignment="Top" Width="120" FontSize="11" >
             <ComboBoxItem IsSelected="True">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock>сегодня, чт 25 мая</TextBlock>
@@ -36,6 +36,34 @@
                 <TextBlock>чт, 1 июня</TextBlock>
             </StackPanel>
         </ComboBox>
-        <Button Click="back_Click" Name="back" Content="Back" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" VerticalAlignment="Top" Width="67" />
+        <Button Click="back_Click" Name="back" Content="Back" HorizontalAlignment="Left" Height="20" Margin="665,11,0,0" VerticalAlignment="Top" Width="67" />
+        <Image x:Name="image"  Source="stranger.jpg" HorizontalAlignment="Left" Height="313" Margin="15,19,0,0" VerticalAlignment="Top" Width="216"/>
+        <Image x:Name="r1_PNG"  HorizontalAlignment="Left" Height="55" Margin="15,332,0,0" VerticalAlignment="Top" Width="207" Source="r1.PNG" Stretch="Fill"/>
+        <TextBox BorderBrush="#FFDCFAF9" Background="#FFDCFAF9" Foreground="DarkBlue" Name="textBox" HorizontalAlignment="Left" Height="72" Margin="233,15,0,0" TextWrapping="Wrap" Text="Чужой: Завет" VerticalAlignment="Top" Width="256" FontSize="35"/>
+        <TextBox BorderBrush="#FFDCFAF9" Background="#FFDCFAF9" Foreground="OrangeRed" x:Name="textBox1" HorizontalAlignment="Left" Height="287" Margin="232,100,0,0" TextWrapping="Wrap" Text="Жанр&#xD;&#xA;&#xD;&#xA;Год&#xD;&#xA;&#xD;&#xA;Страна&#xD;&#xA;&#xD;&#xA;Режиссер&#xD;&#xA;&#xD;&#xA;Продюсер&#xD;&#xA;&#xD;&#xA;Возраст&#xD;&#xA;&#xD;&#xA;Время&#xD;&#xA;&#xD;&#xA;В главных ролях&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" VerticalAlignment="Top" Width="100"/>
+        <TextBox BorderBrush="#FFDCFAF9" Background="#FFDCFAF9" Foreground="Black" x:Name="textBox2" HorizontalAlignment="Left" Height="288" Margin="333,100,0,0" TextWrapping="Wrap" Text="ужасы, фантастика, триллер&#xD;&#xA;&#xD;&#xA;2017&#xD;&#xA;&#xD;&#xA;Великобритания, США&#xD;&#xA;&#xD;&#xA;Ридли Скотт&#xD;&#xA;&#xD;&#xA;Дэвид Гайлер, Эми Грин Винс&#xD;&#xA;&#xD;&#xA;18+&#xD;&#xA;&#xD;&#xA;122 мин./02:02&#xD;&#xA;&#xD;&#xA;Майкл Фассбендер&#xD;&#xA;Кэтрин Уотерсон&#xD;&#xA;Билли Крудап и др.&#xD;&#xA;&#xD;&#xA;" VerticalAlignment="Top" Width="178"/>
+        <Label x:Name="label" Content="Билеты Вы можете приобрести в кассе кинотеатра" HorizontalAlignment="Left" Margin="376,393,0,0" VerticalAlignment="Top" Width="356" FontSize="14" FontFamily="Segoe UI Semibold" Foreground="#FF2536F1"/>
+        <Label x:Name="label2" Content="2D:" HorizontalAlignment="Left" Margin="520,125,0,0" VerticalAlignment="Top" Width="38" FontSize="17" FontFamily="Segoe UI Black"/>
+        <Label x:Name="label3" Content="00.25" HorizontalAlignment="Left" Height="29" Margin="571,122,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4" Content=" 249 руб." HorizontalAlignment="Left" Height="29" Margin="564,146,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy" Content="05.15" HorizontalAlignment="Left" Height="29" Margin="633,122,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy" Content=" 249 руб." HorizontalAlignment="Left" Height="29" Margin="625,146,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy1" Content="11.30" HorizontalAlignment="Left" Height="29" Margin="576,295,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy1" Content=" 299 руб." HorizontalAlignment="Left" Height="29" Margin="570,316,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy2" Content="22.15" HorizontalAlignment="Left" Height="29" Margin="670,194,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy2" Content=" 350 руб." HorizontalAlignment="Left" Height="29" Margin="667,218,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy3" Content="17.30" HorizontalAlignment="Left" Height="29" Margin="608,194,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy3" Content=" 300 руб." HorizontalAlignment="Left" Height="29" Margin="600,218,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy4" Content="15.00" HorizontalAlignment="Left" Height="29" Margin="540,194,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy4" Content=" 300 руб." HorizontalAlignment="Left" Height="29" Margin="536,218,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy5" Content="09.00" HorizontalAlignment="Left" Height="29" Margin="689,122,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy5" Content=" 249 руб." HorizontalAlignment="Left" Height="29" Margin="682,146,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy6" Content="19.25" HorizontalAlignment="Left" Height="29" Margin="634,295,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy6" Content=" 349 руб." HorizontalAlignment="Left" Height="29" Margin="624,316,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label3_Copy7" Content="23.00" HorizontalAlignment="Left" Height="29" Margin="690,295,0,0" VerticalAlignment="Top" Width="48" FontSize="15" Foreground="#FF3531D6"/>
+        <Label x:Name="label4_Copy7" Content=" 349 руб." HorizontalAlignment="Left" Height="29" Margin="681,316,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF67513"/>
+        <Label x:Name="label2_Copy" Content="3D:" HorizontalAlignment="Left" Margin="520,292,0,0" VerticalAlignment="Top" Width="38" FontSize="17" FontFamily="Segoe UI Black"/>
+
+
     </Grid>
 </Window>
